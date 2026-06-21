@@ -1,10 +1,10 @@
 { pkgs, appimageTools, copyDesktopItems, makeDesktopItem, ... }:
 let
   pname = "beeper";
-  version = "4.2.923";
+  version = "4.2.945";
   src = pkgs.fetchurl {
     url = "https://beeper-desktop.download.beeper.com/builds/Beeper-${version}-x86_64.AppImage";
-    hash = "sha256-zx6V+UQSdY3GBLarJ/4znyfPSS84OpvTFbkVhHFiv/U=";
+    hash = "sha256-opr2Fqzr7nJTCa66d9S0+WToD9zmOXJRfA2hnSvRiaE=";
   };
 
   appimageContents = pkgs.appimageTools.extract { inherit pname version src; };
