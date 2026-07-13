@@ -7,10 +7,22 @@ let
     hash = "sha256-luMwF1yCc3ja0AFVNkWU9QMdSEiyH7u25MaVT/+3BQQ=";
   };
 
-  appimageContents = pkgs.appimageTools.extract { inherit pname version src; };
+  # Beeper's current AppImage stores its AI2 marker at offset 1024,
+  # while nixpkgs' appimage-exec reads it from the ELF header.
+  patchedSrc = pkgs.runCommand "${pname}-${version}-appimage-patched" { } ''
+    cp ${src} $out
+    chmod u+w $out
+    printf '\x41\x49\x02' | dd of=$out bs=1 seek=8 conv=notrunc
+  '';
+
+  appimageContents = pkgs.appimageTools.extract {
+    inherit pname version;
+    src = patchedSrc;
+  };
 in
-appimageTools.wrapType2 rec {
-  inherit pname version src;
+appimageTools.wrapAppImage rec {
+  inherit pname version;
+  src = appimageContents;
   pkgs = pkgs;
 
   nativeBuildInputs = [
