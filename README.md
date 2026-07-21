@@ -2,6 +2,9 @@
 
 Is what it says on the tin: A Flake for Beeper Desktop.
 
+> [!WARNING]
+> I don't really use Beeper anymore, so if something breaks I probably won't fix it. PRs are very much welcome
+
 ## Packages
 
 ```nix
