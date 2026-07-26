@@ -1,10 +1,10 @@
 { pkgs, appimageTools, copyDesktopItems, makeDesktopItem, ... }:
 let
   pname = "beeper";
-  version = "4.2.985";
+  version = "4.2.1004";
   src = pkgs.fetchurl {
     url = "https://beeper-desktop.download.beeper.com/builds/Beeper-${version}-x86_64.AppImage";
-    hash = "sha256-oWJdpZL+Q8/jaI/WJfgXUisPASuvHkxU6rOeJkedHSM=";
+    hash = "sha256-JmeD/gVBdj6Tb7Y9L43V2WoFgw3y9q1xiIjF723JmuQ=";
   };
 
   # Beeper's current AppImage stores its AI2 marker at offset 1024,
