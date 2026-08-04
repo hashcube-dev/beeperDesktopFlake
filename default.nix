@@ -23,8 +23,6 @@ in
 appimageTools.wrapAppImage rec {
   inherit pname version;
   src = appimageContents;
-  pkgs = pkgs;
-
   nativeBuildInputs = [
     copyDesktopItems
   ];
