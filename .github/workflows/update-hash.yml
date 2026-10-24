@@ -19,5 +19,5 @@ jobs:
       shell: nu {0}
     - uses: stefanzweifel/git-auto-commit-action@v7
       with:
-          commit_message: "[Auto] Update Hash & Version"
+          commit_message: "chore(ci): update manifest.toml"
     - run: nix build
