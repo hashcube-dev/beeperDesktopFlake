@@ -28,7 +28,7 @@ Error: /nix/store/pviwkc46bz31drcy0f99c5zh5a1dnagh-beeper-0.90.1130.90.113-ab95d
     at require (/nix/store/pviwkc46bz31drcy0f99c5zh5a1dnagh-beeper-0.90.1130.90.113-ab95d01-extracted/resources/app/build/main/223.js:2:624840)
     at 895 (/nix/store/pviwkc46bz31drcy0f99c5zh5a1dnagh-beeper-0.90.1130.90.113-ab95d01-extracted/resources/app/node_modules/keytar/index.js:1:100)
     at __nccwpck_require__ (/nix/store/pviwkc46bz31drcy0f99c5zh5a1dnagh-beeper-0.90.1130.90.113-ab95d01-extracted/resources/app/node_modules/keytar/index.js:1:919)
-    ```
+```
 
 ### Regarding Darwin
 
