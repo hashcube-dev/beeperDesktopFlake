@@ -1,0 +1,19 @@
+[stable.x86_64-linux]
+version = "4.3.229"
+hash = "sha256-QaHCygja/JTxS30AN5iVZT6bZX54l2Qv9eKzk4DeuHQ="
+url = "https://beeper-desktop.download.beeper.com/builds/Beeper-4.3.229-x86_64.AppImage"
+
+[stable.arm64-linux]
+version = "4.3.229"
+hash = "sha256-IyhfdfDl9RP2domdmX2OwYdoTzRaVOdIJk4u+Z5KhWg="
+url = "https://beeper-desktop.download.beeper.com/builds/Beeper-4.3.229-arm64.AppImage"
+
+[stable.x86_64-darwin]
+version = "4.3.229"
+hash = "sha256-p5TmcSLK3ZMrrKenyv/d4bMTdeF5QdJripYkunlJ6hg="
+url = "https://beeper-desktop.download.beeper.com/builds/Beeper-4.3.229.dmg"
+
+[stable.arm64-darwin]
+version = "4.3.229"
+hash = "sha256-hpqlv+KR7WVysESSsWkdfui0vQp9PmUlU6i5EuNsZfY="
+url = "https://beeper-desktop.download.beeper.com/builds/Beeper-4.3.229-arm64.dmg"

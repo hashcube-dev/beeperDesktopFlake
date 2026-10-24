@@ -1,10 +1,19 @@
-{ pkgs, appimageTools, copyDesktopItems, makeDesktopItem, ... }:
+{
+  pkgs,
+  appimageTools ? pkgs.appimageTools,
+  copyDesktopItems ? pkgs.copyDesktopItems,
+  makeDesktopItem ? pkgs.makeDesktopItem,
+  importTOML ? pkgs.lib.importTOML,
+  os ? "linux-x86_64",
+  ...
+}:
 let
+  manifest = importTOML ./manifest.toml;
+  pkg_info = manifest.stable.${os};
   pname = "beeper";
-  version = "4.3.209";
+  version = pkg_info.version;
   src = pkgs.fetchurl {
-    url = "https://beeper-desktop.download.beeper.com/builds/Beeper-${version}-x86_64.AppImage";
-    hash = "sha256-QdoJguVXOHs8xtSL0wEqPv9zKFub66be5DNaFU6KMMc=";
+    inherit (pkg_info) url hash;
   };
 
   # Beeper's current AppImage stores its AI2 marker at offset 1024,

@@ -16,7 +16,7 @@
     in {
       default = self.packages.${system}.beeper.stable;
       beeper = {
-        stable = pkgs.callPackage ./default.nix {};
+        stable = pkgs.callPackage ./default.nix { os = system; inherit pkgs; };
       };
     });
   };
