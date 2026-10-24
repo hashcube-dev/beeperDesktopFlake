@@ -4,12 +4,13 @@
   copyDesktopItems ? pkgs.copyDesktopItems,
   makeDesktopItem ? pkgs.makeDesktopItem,
   importTOML ? pkgs.lib.importTOML,
-  os ? "linux-x86_64",
+  system ? "linux-x86_64",
+  build ? "stable",
   ...
 }:
 let
   manifest = importTOML ./manifest.toml;
-  pkg_info = manifest.stable.${os};
+  pkg_info = manifest.${build}.${system};
   pname = "beeper";
   version = pkg_info.version;
   src = pkgs.fetchurl {
